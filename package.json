@@ -1,0 +1,50 @@
+{
+  "name": "whatsapp-web-bot",
+  "main": "src/index.ts",
+  "description": "WhatsApp Bot",
+  "version": "0.8.0",
+  "license": "MIT",
+  "keywords": [
+    "whatsapp",
+    "whatsapp-web",
+    "whatsapp-bot",
+    "whatsapp-api",
+    "whatsapp-multi-session",
+    "whatsapp-multi-device",
+    "api",
+    "bot",
+    "client",
+    "node",
+    "nodejs",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsc && cp -r src/config dist/",
+    "start": "node -r dotenv/config dist/index.js",
+    "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules -r dotenv/config src/index.ts",
+    "lint": "eslint . --fix --ext .js,.ts",
+    "setauth": "tsnd --transpile-only -r dotenv/config src/scripts/setauth.ts"
+  },
+  "dependencies": {
+    "openai": "^4.77.0",
+    "axios": "^1.7.9",
+    "node-base64-image": "^2.0.1",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.27.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.6",
+    "@types/qrcode": "^1.5.5",
+    "@types/qrcode-terminal": "^0.12.2",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.4.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}

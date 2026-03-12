@@ -1,0 +1,104 @@
+{
+  "companyInfo": {
+    "name": "Sanok Nationalwide Fumigators",
+    "location": "Gateway Mall Third Floor, Mombasa Road, Nairobi",
+    "serviceArea": ["Nairobi", "Mombasa", "Nakuru"]
+  },
+  "pricing": {
+    "mosquito": {
+      "bachelor": 2000,
+      "1bedroom": 3500,
+      "2bedroom": 4500,
+      "3bedroom": 5500,
+      "4bedroom": 6500,
+      "5bedroom": 8500,
+      "6bedroom": 9500,
+      "7bedroom": 12500,
+      "8bedroom": 12500
+    },
+    "rat": {
+      "bachelor": 2000,
+      "1bedroom": 3500,
+      "2bedroom": 4500,
+      "3bedroom": 5500,
+      "4bedroom": 6500,
+      "5bedroom": 8500,
+      "6bedroom": 9500,
+      "7bedroom": 12500,
+      "8bedroom": 12500
+    },
+    "bedbug": {
+      "bachelor": 3000,
+      "1bedroom": 4500,
+      "2bedroom": 5500,
+      "3bedroom": 7500,
+      "4bedroom": 9500,
+      "5bedroom": 12500,
+      "6bedroom": 14500,
+      "7bedroom": 16500,
+      "8bedroom": 16500
+    },
+    "cockroach": {
+      "bachelor": 2000,
+      "1bedroom": 3500,
+      "2bedroom": 4500,
+      "3bedroom": 5500,
+      "4bedroom": 6500,
+      "5bedroom": 8500,
+      "6bedroom": 9500,
+      "7bedroom": 12500,
+      "8bedroom": 12500
+    }
+  },
+  "faqs": [
+    {
+      "id": 1,
+      "keywords": ["services", "offer", "what do you do", "what services"],
+      "question": "What services do you offer?",
+      "answer": "We provide professional fumigation services for mosquitoes, rats, bedbugs, and cockroaches."
+    },
+    {
+      "id": 2,
+      "keywords": ["location", "where are you", "address", "find you"],
+      "question": "Where are you located?",
+      "answer": "We are located at Gateway Mall Third Floor, Mombasa Road, Nairobi. We serve the entire Nairobi, Mombasa, and Nakuru area."
+    },
+    {
+      "id": 3,
+      "keywords": ["preparation", "prepare", "before fumigation", "what to do before"],
+      "question": "Are there any preparations needed before fumigation?",
+      "answer": "Keep all cooked food in the refrigerator and put the open groceries in plastic bags."
+    },
+    {
+      "id": 4,
+      "keywords": ["part of house", "partial", "kitchen only", "one room"],
+      "question": "Can you fumigate just part of the house (e.g., kitchen only)?",
+      "answer": "We fumigate the whole house for 100% effectiveness. This is our company policy."
+    },
+    {
+      "id": 5,
+      "keywords": ["discount", "cheaper", "price reduction", "special offer"],
+      "question": "Do you offer any discounts?",
+      "answer": "Our prices are fixed. We provide a one-month warranty and recommend fumigation once a year."
+    },
+    {
+      "id": 6,
+      "keywords": ["cleaning", "clean", "cleaning services"],
+      "question": "Do you offer cleaning services?",
+      "answer": "We do not offer cleaning services because our fumigation is gas-based and does not dirty the house."
+    },
+    {
+      "id": 7,
+      "keywords": ["how long", "wait", "return", "when can we use"],
+      "question": "How long before we can use the house?",
+      "answer": "Adults can return after 1 hour. Kids, especially under 10 years old, should return after 3 hours."
+    },
+    {
+      "id": 8,
+      "keywords": ["book", "booking", "schedule", "appointment"],
+      "question": "Would you like to book our services?",
+      "answer": "Would you like to book our services? Please let me know how many bedrooms your house has and which pest you need help with, and I'll assist you with the booking."
+    }
+  ],
+  "outOfAreaResponse": "Sadly, we don't have a branch there yet. We currently only serve the Gauteng/Johannesburg area."
+}

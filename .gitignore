@@ -1,0 +1,12 @@
+.env
+dist
+node_modules
+*.lock
+package-lock.json
+src/config/integrantes.json
+.idea
+.wwebjs_*
+src/data/*
+!src/data/.gitkeep
+.DS_Store
+
