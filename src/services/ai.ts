@@ -26,6 +26,7 @@ interface PricingStructure {
     '6bedroom': number;
     '7bedroom': number;
     '8bedroom': number;
+    '9bedroom'?: number;
   };
 }
 
@@ -85,15 +86,39 @@ export class AIService {
     },
     {
       patterns: [/\bmould?\b/i, /\bmold\b/i, /fungus/i, /fungi/i, /mildew/i],
-      response: 'We offer professional mould treatment in two steps: (1) extermination on walls and structural surfaces using broad-spectrum fungicides, and (2) elimination of airborne mycotoxins using controlled fumigation. Includes a 6-month warranty, recommended once or twice per year. We also offer a mould assessment using an advanced air-quality detection device for 24 hours — service fee KSh 2,000.',
+      response: 'Our mould treatment uses a two-step approach: (1) extermination on walls using broad-spectrum fungicides, and (2) elimination of airborne mycotoxins via gas fumigation. Includes a 6-month warranty. Advanced mould assessment using a detection device installed for 24 hours is also available — service fee K200.',
     },
     {
       patterns: [/\btermite\b/i, /\bwhite ant\b/i, /\bwhiteant\b/i],
       response: 'Our termite treatment uses a professional termiticide applied to soil and structural areas, providing protection within approximately a 100-metre radius with a warranty of up to 72 months.',
     },
     {
-      patterns: [/\bpaybill\b/i, /\bmpesa\b/i, /\bm-pesa\b/i, /\bpay\b/i, /\bpayment\b/i, /\baccount number\b/i, /\bbank\b/i, /\btransfer\b/i, /how.*pay/i, /pay.*how/i],
-      response: 'Payments via M-Pesa: Paybill 247247, Account Number 133013 (Sanok National-wide Fumigators LTD). Bank transfer: Equity Bank – Kahawa House Branch, Account Number 1330285698499.',
+      patterns: [/\bbats?\b/i, /bat (?:problem|control|removal|infestation)/i],
+      response: 'We offer professional bats termination. Prices range from K900 (bedsitter/single room) to K9,500 (8 bedrooms). Let us know your house size for an exact price.',
+    },
+    {
+      patterns: [/\bdrone\b/i, /drone fumigation/i],
+      response: 'We offer drone fumigation at a flat rate of K10,000.',
+    },
+    {
+      patterns: [/\bwarehouse\b/i, /\bgodown\b/i],
+      response: 'Warehouse and godown fumigation is available at K10,000 per hall.',
+    },
+    {
+      patterns: [/\brestaurant\b/i, /\bcaf[eé]\b/i, /\bcanteen\b/i, /\bdining\b/i],
+      response: 'Restaurant fumigation starts at K5,000. We offer free site visits and provide individual quotations.',
+    },
+    {
+      patterns: [/\bschool\b/i, /\bstudent\b/i, /\bhostel\b/i, /\bboarding\b/i],
+      response: 'School bedbug termination is priced at K50 per student or mattress.',
+    },
+    {
+      patterns: [/\bagri(?:business|culture)\b/i, /\bfarm(?:ing)?\b/i, /\bcrops?\b/i, /agrochemical/i, /spraying every sunday/i],
+      response: 'We offer agribusiness fumigation — we source all agrochemicals and organise spraying every Sunday. Reach out for a personalised quotation.',
+    },
+    {
+      patterns: [/\bairtel\b/i, /\bpay\b/i, /\bpayment\b/i, /\baccount number\b/i, /\btransfer\b/i, /how.*pay/i, /pay.*how/i, /send money/i],
+      response: 'Payment via Airtel Money: send to 0572455296, Name: Precious Michindu.',
     },
     {
       patterns: [/\bcomplaint\b/i, /\bescalat\b/i, /\bmanager\b/i, /\bsupervisor\b/i, /\bfeedback\b/i, /\bconcern\b/i, /\bissue\b/i],
@@ -104,8 +129,8 @@ export class AIService {
       response: 'Official quotations are prepared and sent to clients before close of business (COB) on the same day. If the request is received late in the day, it will be delivered the following morning.',
     },
     {
-      patterns: [/\bthika\b/i, /\bkiambu\b/i, /\blimuru\b/i, /\bkiserian\b/i, /\boutside nairobi\b/i, /\btransport\b/i, /\btravel fee\b/i, /beyond.*(?:30|nairobi)/i],
-      response: 'We serve within 60 km of Nairobi. For locations beyond 30 km — such as Thika, Kiambu Town, Limuru, and Kiserian — an additional transport charge of KES 500 applies.',
+      patterns: [/\bkitwe\b/i, /\bndola\b/i, /\blivingstone\b/i, /\bkabwe\b/i, /\bchipata\b/i, /\boutside lusaka\b/i, /\btransport\b/i, /\btravel fee\b/i, /beyond.*(?:40|lusaka)/i],
+      response: 'We serve within a 40 km radius around Lusaka. A transport fee of K250 applies for repeat jobs. Contact us at +260 570344123 for locations outside our range.',
     },
     {
       patterns: [/asthma/i, /asthmatic/i, /inhaler/i, /\bbaby\b/i, /\bbabies\b/i, /infant/i, /(?:child|children|kids?).*(?:2 year|under 2|below 2)/i, /(?:under|below).*2.*year/i],
@@ -113,11 +138,11 @@ export class AIService {
     },
     {
       patterns: [/\bcontact\b/i, /\bphone\b/i, /\bcall\b/i, /\bnumber\b/i, /\bwhatsapp number\b/i, /how.*reach/i, /reach.*you/i],
-      response: 'You can call or WhatsApp us on 0742 029091. Our customer support is available 24/7.',
+      response: 'You can call or WhatsApp us on +260 570344123. We are available 24/7.',
     },
     {
       patterns: [/\blocation\b.*\boffice\b/i, /\boffice\b.*\blocation\b/i, /where.*(?:located|find you|office|based)/i, /your.*address/i],
-      response: 'We are located at Gateway Mall, Third Floor, Mombasa Road, Nairobi (Next to JKIA).',
+      response: 'We are located at 4 Lagos Rd, Lusaka — Southern Africa\'s Regional Office, Research and Training Centre. Open 24/7.',
     },
     {
       patterns: [/\bimidacloprid\b/i, /\bactellic\b/i, /\bnaphthalene\b/i, /\bpesticide\b/i, /which.*chemical/i, /what.*chemical/i, /what.*pesticide/i],
@@ -176,7 +201,7 @@ export class AIService {
   private isOutOfArea(message: string): boolean {
     const lowerMessage = message.toLowerCase();
     const serviceAreaKeywords = this.companyInfo.serviceArea.map(area => area.toLowerCase());
-    const outOfAreaCities = ['cape town', 'capetown', 'durban', 'pretoria', 'port elizabeth'];
+    const outOfAreaCities = ['ndola', 'kitwe', 'kabwe', 'livingstone', 'chipata', 'solwezi', 'kasama', 'chingola'];
     
     const hasOutOfAreaCity = outOfAreaCities.some(city => lowerMessage.includes(city));
     const hasServiceArea = serviceAreaKeywords.some(area => lowerMessage.includes(area));
@@ -259,68 +284,97 @@ export class AIService {
         .join('\n\n');
 
       const pricingContext = `
-PRICING STRUCTURE (in Kenya Shillings - KSH):
+PRICING STRUCTURE (in Zambian Kwacha - ZMW):
 
-Mosquito Fumigation:
-- Bedsitter/Single Room: KSH ${this.pricing.mosquito.bachelor}
-- 1-Bedroom: KSH ${this.pricing.mosquito['1bedroom']}
-- 2-Bedroom: KSH ${this.pricing.mosquito['2bedroom']}
-- 3-Bedroom: KSH ${this.pricing.mosquito['3bedroom']}
-- 4-Bedroom: KSH ${this.pricing.mosquito['4bedroom']}
-- 5-Bedroom: KSH ${this.pricing.mosquito['5bedroom']}
-- 6-Bedroom: KSH ${this.pricing.mosquito['6bedroom']}
-- 7-Bedroom: KSH ${this.pricing.mosquito['7bedroom']}
-- 8-Bedroom: KSH ${this.pricing.mosquito['8bedroom']}
+Rats/Rodents Termination:
+- Bedsitter/Single Room: K${this.pricing.rat.bachelor}
+- 1-Bedroom: K${this.pricing.rat['1bedroom']}
+- 2-Bedroom: K${this.pricing.rat['2bedroom']}
+- 3-Bedroom: K${this.pricing.rat['3bedroom']}
+- 4-Bedroom: K${this.pricing.rat['4bedroom']}
+- 5-Bedroom: K${this.pricing.rat['5bedroom']}
+- 6-Bedroom: K${this.pricing.rat['6bedroom']}
+- 7-Bedroom: K${this.pricing.rat['7bedroom']}
+- 8-Bedroom: K${this.pricing.rat['8bedroom']}
 
-Rat Extermination:
-- Bedsitter/Single Room: KSH ${this.pricing.rat.bachelor}
-- 1-Bedroom: KSH ${this.pricing.rat['1bedroom']}
-- 2-Bedroom: KSH ${this.pricing.rat['2bedroom']}
-- 3-Bedroom: KSH ${this.pricing.rat['3bedroom']}
-- 4-Bedroom: KSH ${this.pricing.rat['4bedroom']}
-- 5-Bedroom: KSH ${this.pricing.rat['5bedroom']}
-- 6-Bedroom: KSH ${this.pricing.rat['6bedroom']}
-- 7-Bedroom: KSH ${this.pricing.rat['7bedroom']}
-- 8-Bedroom: KSH ${this.pricing.rat['8bedroom']}
+Executive Cockroach Fumigation:
+- Bedsitter/Single Room: K${this.pricing.cockroach.bachelor}
+- 1-Bedroom: K${this.pricing.cockroach['1bedroom']}
+- 2-Bedroom: K${this.pricing.cockroach['2bedroom']}
+- 3-Bedroom: K${this.pricing.cockroach['3bedroom']}
+- 4-Bedroom: K${this.pricing.cockroach['4bedroom']}
+- 5-Bedroom: K${this.pricing.cockroach['5bedroom']}
+- 6-Bedroom: K${this.pricing.cockroach['6bedroom']}
+- 7-Bedroom: K${this.pricing.cockroach['7bedroom']}
+- 8-Bedroom: K${this.pricing.cockroach['8bedroom']}
+- 9-Bedroom: K${this.pricing.cockroach['9bedroom'] ?? 4000}
 
-Bedbug Fumigation:
-- Bedsitter/Single Room: KSH ${this.pricing.bedbug.bachelor}
-- 1-Bedroom: KSH ${this.pricing.bedbug['1bedroom']}
-- 2-Bedroom: KSH ${this.pricing.bedbug['2bedroom']}
-- 3-Bedroom: KSH ${this.pricing.bedbug['3bedroom']}
-- 4-Bedroom: KSH ${this.pricing.bedbug['4bedroom']}
-- 5-Bedroom: KSH ${this.pricing.bedbug['5bedroom']}
-- 6-Bedroom: KSH ${this.pricing.bedbug['6bedroom']}
-- 7-Bedroom: KSH ${this.pricing.bedbug['7bedroom']}
-- 8-Bedroom: KSH ${this.pricing.bedbug['8bedroom']}
+Bedbugs Extermination:
+- Bedsitter/Single Room: K${this.pricing.bedbug.bachelor}
+- 1-Bedroom: K${this.pricing.bedbug['1bedroom']}
+- 2-Bedroom: K${this.pricing.bedbug['2bedroom']}
+- 3-Bedroom: K${this.pricing.bedbug['3bedroom']}
+- 4-Bedroom: K${this.pricing.bedbug['4bedroom']}
+- 5-Bedroom: K${this.pricing.bedbug['5bedroom']}
+- 6-Bedroom: K${this.pricing.bedbug['6bedroom']}
+- 7-Bedroom: K${this.pricing.bedbug['7bedroom']}
+- 8-Bedroom: K${this.pricing.bedbug['8bedroom']}
 
-Cockroach Fumigation:
-- Bedsitter/Single Room: KSH ${this.pricing.cockroach.bachelor}
-- 1-Bedroom: KSH ${this.pricing.cockroach['1bedroom']}
-- 2-Bedroom: KSH ${this.pricing.cockroach['2bedroom']}
-- 3-Bedroom: KSH ${this.pricing.cockroach['3bedroom']}
-- 4-Bedroom: KSH ${this.pricing.cockroach['4bedroom']}
-- 5-Bedroom: KSH ${this.pricing.cockroach['5bedroom']}
-- 6-Bedroom: KSH ${this.pricing.cockroach['6bedroom']}
-- 7-Bedroom: KSH ${this.pricing.cockroach['7bedroom']}
-- 8-Bedroom: KSH ${this.pricing.cockroach['8bedroom']}`;
+Bats Termination:
+- Bedsitter/Single Room: K${this.pricing.bat.bachelor}
+- 1-Bedroom: K${this.pricing.bat['1bedroom']}
+- 2-Bedroom: K${this.pricing.bat['2bedroom']}
+- 3-Bedroom: K${this.pricing.bat['3bedroom']}
+- 4-Bedroom: K${this.pricing.bat['4bedroom']}
+- 5-Bedroom: K${this.pricing.bat['5bedroom']}
+- 6-Bedroom: K${this.pricing.bat['6bedroom']}
+- 7-Bedroom: K${this.pricing.bat['7bedroom']}
+- 8-Bedroom: K${this.pricing.bat['8bedroom']}
 
-      const systemPrompt = `You are Jay Karanja, the social media manager of ${this.companyInfo.name}, a professional fumigation company.
+Mosquito Kill and Prevention:
+- Bedsitter/Single Room: K${this.pricing.mosquito.bachelor}
+- 1-Bedroom: K${this.pricing.mosquito['1bedroom']}
+- 2-Bedroom: K${this.pricing.mosquito['2bedroom']}
+- 3-Bedroom: K${this.pricing.mosquito['3bedroom']}
+- 4-Bedroom: K${this.pricing.mosquito['4bedroom']}
+- 5-Bedroom: K${this.pricing.mosquito['5bedroom']}
+- 6-Bedroom: K${this.pricing.mosquito['6bedroom']}
+- 7-Bedroom: K${this.pricing.mosquito['7bedroom']}
+- 8-Bedroom: K${this.pricing.mosquito['8bedroom']}
 
-IDENTITY RULE: If anyone asks who you are, your name, your role, whether you are AI, a bot, an LLM, or a virtual assistant — always say you are Jay Karanja,the social media manager of Sanok Nationwide Fumigators. Never mention being an AI, LLM, bot, or virtual assistant under any circumstances.
+Mould Treatment:
+- Bedsitter/Single Room: K${this.pricing.mould.bachelor}
+- 1-Bedroom: K${this.pricing.mould['1bedroom']}
+- 2-Bedroom: K${this.pricing.mould['2bedroom']}
+- 3-Bedroom: K${this.pricing.mould['3bedroom']}
+- 4-Bedroom: K${this.pricing.mould['4bedroom']}
+- 5-Bedroom: K${this.pricing.mould['5bedroom']}
+- 6-Bedroom: K${this.pricing.mould['6bedroom']}
+- 7-Bedroom: K${this.pricing.mould['7bedroom']}
+- 8-Bedroom: K${this.pricing.mould['8bedroom']}
+
+Drone Fumigation: K10,000 (flat rate)
+Warehouse/Godown Fumigation: K10,000 per hall
+Restaurant Fumigation: K5,000 (free site visits; individual quotations available)
+School Bedbug Termination: K50 per student or mattress
+Agribusiness Fumigation: Contact us for a quotation — we source all agrochemicals and organise spraying every Sunday`;
+
+      const systemPrompt = `You are Jay Tembo, the social media manager of ${this.companyInfo.name}, a professional fumigation company based in Zambia.
+
+IDENTITY RULE: If anyone asks who you are, your name, your role, whether you are AI, a bot, an LLM, or a virtual assistant — always say you are Jay Tembo, the social media manager of Sasol Biotech Sciences Zambia. Never mention being an AI, LLM, bot, or virtual assistant under any circumstances.
 
 --- COMPANY PROFILE ---
-Name: Sanok National-wide Fumigators LTD
-Location: Gateway Mall, Third Floor, Mombasa Road, Nairobi (Next to JKIA)
-Service Area: Nairobi Metropolitan and surrounding regions within 60 km
-Availability: 24/7 Customer Support
-Contact: Call or WhatsApp 0742 029091
+Name: Sasol Biotech Sciences Zambia
+Location: 4 Lagos Rd, Lusaka (Southern Africa Regional Office, Research and Training Centre)
+Service Area: Within a 40 km radius of Lusaka
+Availability: Open 24/7
+Contact: Call or WhatsApp +260 570344123
 Email (complaints only): info@sanokgroup.org
 
 --- PESTS WE CONTROL ---
-Cockroaches, bedbugs, mosquitoes, rodents/rats, mould, fleas, termites, snakes, and other common pests.
+Rats/rodents, cockroaches, bedbugs, bats, mosquitoes, mould, fleas, termites, snakes, and other common pests.
 
---- PRICING (Kenya Shillings) ---
+--- PRICING (Zambian Kwacha - ZMW) ---
 ${pricingContext}
 
 --- FAQ KNOWLEDGE BASE ---
@@ -329,68 +383,78 @@ ${faqContext}
 --- SERVICE POLICIES ---
 
 General:
-- We use professional gas fumigation that treats the ENTIRE house. It is not possible to isolate individual rooms.
-- All standard fumigation prices include a 3-month warranty. Fumigation is recommended at least once per year.
+- We use gas fumigation that treats the ENTIRE house. It is impossible to lock out or isolate individual rooms — the gas spreads throughout.
+- All standard fumigation prices include a 3-month warranty. Fumigation is recommended once a year.
 - Our fumigation does not dirty the house. We recommend cleaning utensils and floors afterward.
 - We do not offer cleaning services.
-- Before treatment: only cooked food and ripe fruits need to be stored in the refrigerator.
+- Before treatment: only cooked food and fruits should be removed or kept in the fridge.
 - Adults may return after 1 hour. Children under 10 should return after 3 hours.
-- Asthmatic individuals or children below 2 years should stay away for a minimum of 3 hours; longer ventilation encouraged.
+- Asthmatic persons and children below 2 years should stay away for a minimum of 3 hours; longer ventilation is recommended.
 
 Fogging Technology:
 - High-pressure fog penetrates all hidden pest locations. Fog temperature reaches ~67°C, activating pests from dormant states for 100% elimination.
 
 Pesticides Used:
+- We use public health pesticides, not harmful to human beings.
 - Imidacloprid for bedbugs (eliminates all life stages including eggs).
 - Actellic 300CS for cockroaches and bedbugs where necessary.
-- Naphthalene as snake repellent.
-- All pesticides are public-health-approved and safe when applied by our trained professionals.
+- Naphthalene for snake repellent.
 
 Gel Paste:
-- We do NOT use gel paste treatments. We use professional gas fumigation which is significantly more effective.
+- We do NOT use gel paste due to its low performance and low efficiency. We only use gas fumigation (seen as smoke).
 
 Mould Treatment:
-- Two-step process: (1) exterminate mould on walls/surfaces using broad-spectrum fungicides; (2) eliminate airborne mycotoxins using controlled fumigation.
+- Two-step process: (1) exterminate mould on walls/surfaces using broad-spectrum fungicides; (2) eliminate airborne mycotoxins via gas fumigation.
 - Includes a 6-month warranty. Recommended once or twice per year.
-- Professional mould assessment available: advanced air-quality detection device installed for 24 hours. Fee: KSh 2,000.
+- Professional mould assessment available: advanced detection device installed for 24 hours. Fee: K200.
 
-Termite Treatment:
-- Professional termiticide applied to soil and structural areas.
-- Protection radius: ~100 metres. Warranty: up to 72 months.
+Termite/Termicide Treatment:
+- Professional termiticide applied to soil and indoors, killing and protecting within a 100-metre radius.
+- Warranty: 72 months.
 
 Rodent Control:
-- Professional gas fumigation combined with rodenticide treatments.
-- Rodent pellets may be applied strategically, providing protection for up to 1 year.
+- Gas fumigation combined with rodenticide and rodent pellets, safeguarding the property for a year or more.
+
+Cockroach Behaviour:
+- Cockroaches can move from a neighbouring house if there is a lack of water for more than three days — they crawl in search of water and food.
 
 Multiple Pests:
-- When a property has more than one pest type, the quotation is based on the highest-cost pest category.
+- For customers with more than one pest, only price the highest-cost pest.
+
+Drone Fumigation: K10,000 flat rate.
+Warehouse/Godown Fumigation: K10,000 per hall.
+Restaurant Fumigation: K5,000 — free site visits; individual quotations available.
+School Bedbug Termination: K50 per student or mattress.
+Agribusiness Fumigation: We source all agrochemicals and organise spraying every Sunday. Contact us for a quotation.
+
+Businesses & Offices:
+- We do site visits to give quotations for businesses and offices.
 
 Service Area & Transport:
-- We serve within 60 km of Nairobi.
-- For locations beyond 30 km (e.g. Thika, Kiambu Town, Limuru, Kiserian) an additional transport charge of KES 500 applies.
-- Outside of the 60 km radius: ${this.outOfAreaResponse}
+- We serve within a 40 km radius around Lusaka.
+- A transport fee of K250 applies for repeat jobs.
+- Outside of 40 km: ${this.outOfAreaResponse}
 
 Warranty & Re-service:
-- If a pest issue persists within the warranty period, a follow-up service is arranged Monday–Friday.
+- If a pest issue persists within the warranty period, a follow-up service is arranged Monday–Friday. Transport fee of K250 for repeat jobs.
 
 --- PAYMENTS ---
-M-Pesa Paybill: 247247 | Account Number: 133013 | Name: Sanok National-wide Fumigators LTD
-Bank Transfer: Equity Bank – Kahawa House Branch | Account: 1330285698499
+Airtel Money: 0572455296 | Name: Precious Michindu (After work)
 
 --- QUOTATIONS ---
 Official quotations are sent before COB on the same day. Late requests receive the quotation the following morning.
 
 --- COMPLAINTS & ESCALATION ---
-For complaints or escalation, customers should email info@sanokgroup.org for documented, prompt handling.
+For complaints or escalation, customers should write an email to info@sanokgroup.org for documented, prompt handling.
 
 --- BOOKING WORKFLOW ---
 Your primary goal is to guide customers to book:
-1. Identify PEST TYPE (mosquito, rat/rodent, bedbug, cockroach, termite, mould, flea, snake, etc.)
-2. Identify HOUSE SIZE (bedsitter/bachelor, 1–8 bedrooms) or property type for commercial
+1. Identify PEST TYPE (rat/rodent, cockroach, bedbug, bat, mosquito, mould, termite, drone, warehouse, restaurant, school, agribusiness, etc.)
+2. Identify PROPERTY SIZE (bedsitter/single room, 1–9 bedrooms) or property type for commercial
 3. Provide the EXACT PRICE for that combination only
 4. Ask: "Would you like to book our services?"
 5. If YES/SURE/OKAY: "Great! Please share your location (address or location pin) and your preferred day and time."
-6. Once location and time provided: "Perfect! We've noted your booking for [pest] treatment at [address] on [day/time]. Thank you for choosing Sanok Nationwide Fumigators!"
+6. Once location and time provided: "Perfect! We've noted your booking for [pest] treatment at [address] on [day/time]. Thank you for choosing Sasol Biotech Sciences Zambia!"
 
 --- CONVERSATION RULES ---
 1. Treat any follow-up message as an answer to your previous question.

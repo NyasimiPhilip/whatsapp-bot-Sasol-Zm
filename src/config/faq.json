@@ -1,103 +1,130 @@
 {
   "companyInfo": {
-    "name": "Sanok Nationalwide Fumigators",
-    "location": "Gateway Mall Third Floor, Mombasa Road, Nairobi",
-    "serviceArea": ["Nairobi", "Mombasa", "Nakuru"]
+    "name": "Sasol Biotech Sciences Zambia",
+    "location": "4 Lagos Rd, Lusaka",
+    "serviceArea": ["Lusaka"]
   },
   "pricing": {
-    "mosquito": {
-      "bachelor": 2000,
-      "1bedroom": 3500,
-      "2bedroom": 4500,
-      "3bedroom": 5500,
-      "4bedroom": 6500,
-      "5bedroom": 8500,
-      "6bedroom": 9500,
-      "7bedroom": 12500,
-      "8bedroom": 12500
-    },
     "rat": {
-      "bachelor": 2000,
-      "1bedroom": 3500,
-      "2bedroom": 4500,
-      "3bedroom": 5500,
-      "4bedroom": 6500,
-      "5bedroom": 8500,
-      "6bedroom": 9500,
-      "7bedroom": 12500,
-      "8bedroom": 12500
-    },
-    "bedbug": {
-      "bachelor": 3000,
-      "1bedroom": 4500,
-      "2bedroom": 5500,
-      "3bedroom": 7500,
-      "4bedroom": 9500,
-      "5bedroom": 12500,
-      "6bedroom": 14500,
-      "7bedroom": 16500,
-      "8bedroom": 16500
+      "bachelor": 900,
+      "1bedroom": 1300,
+      "2bedroom": 1700,
+      "3bedroom": 2100,
+      "4bedroom": 2700,
+      "5bedroom": 3300,
+      "6bedroom": 4300,
+      "7bedroom": 5100,
+      "8bedroom": 9500
     },
     "cockroach": {
-      "bachelor": 2000,
-      "1bedroom": 3500,
-      "2bedroom": 4500,
-      "3bedroom": 5500,
-      "4bedroom": 6500,
-      "5bedroom": 8500,
-      "6bedroom": 9500,
-      "7bedroom": 12500,
-      "8bedroom": 12500
+      "bachelor": 700,
+      "1bedroom": 900,
+      "2bedroom": 1100,
+      "3bedroom": 1500,
+      "4bedroom": 1900,
+      "5bedroom": 2500,
+      "6bedroom": 2800,
+      "7bedroom": 3200,
+      "8bedroom": 3600,
+      "9bedroom": 4000
+    },
+    "bedbug": {
+      "bachelor": 900,
+      "1bedroom": 1300,
+      "2bedroom": 1700,
+      "3bedroom": 2100,
+      "4bedroom": 2700,
+      "5bedroom": 3300,
+      "6bedroom": 4300,
+      "7bedroom": 5100,
+      "8bedroom": 9500
+    },
+    "bat": {
+      "bachelor": 900,
+      "1bedroom": 1300,
+      "2bedroom": 1700,
+      "3bedroom": 2100,
+      "4bedroom": 2700,
+      "5bedroom": 3300,
+      "6bedroom": 4300,
+      "7bedroom": 5100,
+      "8bedroom": 9500
+    },
+    "mosquito": {
+      "bachelor": 700,
+      "1bedroom": 900,
+      "2bedroom": 1100,
+      "3bedroom": 1500,
+      "4bedroom": 1900,
+      "5bedroom": 2500,
+      "6bedroom": 2800,
+      "7bedroom": 3200,
+      "8bedroom": 3600
+    },
+    "mould": {
+      "bachelor": 900,
+      "1bedroom": 1300,
+      "2bedroom": 2000,
+      "3bedroom": 3000,
+      "4bedroom": 4000,
+      "5bedroom": 5000,
+      "6bedroom": 6000,
+      "7bedroom": 7000,
+      "8bedroom": 8000
     }
   },
   "faqs": [
     {
       "id": 1,
-      "keywords": ["services", "offer", "what do you do", "what services"],
+      "keywords": ["services", "offer", "what do you do", "what services", "pests", "which pests"],
       "question": "What services do you offer?",
-      "answer": "We provide professional fumigation services for mosquitoes, rats, bedbugs, and cockroaches."
+      "answer": "We provide professional pest control and fumigation services including rats/rodents, cockroaches, bedbugs, bats, mosquitoes, mould treatment, drone fumigation, warehouse/godown fumigation, restaurant fumigation, school bedbug termination, and agribusiness fumigation."
     },
     {
       "id": 2,
-      "keywords": ["location", "where are you", "address", "find you"],
+      "keywords": ["location", "where are you", "address", "find you", "office"],
       "question": "Where are you located?",
-      "answer": "We are located at Gateway Mall Third Floor, Mombasa Road, Nairobi. We serve the entire Nairobi, Mombasa, and Nakuru area."
+      "answer": "We are located at 4 Lagos Rd, Lusaka — Southern Africa's Regional Office, Research and Training Centre. We are open 24/7."
     },
     {
       "id": 3,
-      "keywords": ["preparation", "prepare", "before fumigation", "what to do before"],
+      "keywords": ["preparation", "prepare", "before fumigation", "what to do before", "food", "remove", "fridge"],
       "question": "Are there any preparations needed before fumigation?",
-      "answer": "Keep all cooked food in the refrigerator and put the open groceries in plastic bags."
+      "answer": "Only cooked food and fruits should be removed or kept in the fridge before fumigation."
     },
     {
       "id": 4,
-      "keywords": ["part of house", "partial", "kitchen only", "one room"],
-      "question": "Can you fumigate just part of the house (e.g., kitchen only)?",
-      "answer": "We fumigate the whole house for 100% effectiveness. This is our company policy."
+      "keywords": ["part of house", "partial", "kitchen only", "one room", "lock", "lockout", "some rooms"],
+      "question": "Can you fumigate just part of the house?",
+      "answer": "We use gas fumigation and fumigate the whole house. It is impossible to lock out some rooms — the gas will spread to the whole house for 100% results."
     },
     {
       "id": 5,
-      "keywords": ["discount", "cheaper", "price reduction", "special offer"],
+      "keywords": ["discount", "cheaper", "price reduction", "special offer", "negotiate", "fixed prices"],
       "question": "Do you offer any discounts?",
-      "answer": "Our prices are fixed. We provide a one-month warranty and recommend fumigation once a year."
+      "answer": "Our prices are fixed. We use superior and effective gas fumigation, give a three-month warranty, and recommend fumigation once a year."
     },
     {
       "id": 6,
-      "keywords": ["cleaning", "clean", "cleaning services"],
+      "keywords": ["cleaning", "clean", "cleaning services", "dirty house"],
       "question": "Do you offer cleaning services?",
-      "answer": "We do not offer cleaning services because our fumigation is gas-based and does not dirty the house."
+      "answer": "We don't offer cleaning services. Our fumigation doesn't dirty the house. However, we recommend you clean the utensils and the floor after treatment."
     },
     {
       "id": 7,
-      "keywords": ["how long", "wait", "return", "when can we use"],
-      "question": "How long before we can use the house?",
-      "answer": "Adults can return after 1 hour. Kids, especially under 10 years old, should return after 3 hours."
+      "keywords": ["how long", "wait", "return", "when can we use", "re-enter", "go back", "come back"],
+      "question": "How long before we can return to the house?",
+      "answer": "Adults can return after one hour. Children especially below ten years should return after three hours. Asthmatic persons and children below two years should be away for three hours or more."
     },
     {
       "id": 8,
       "keywords": ["book", "booking", "schedule", "appointment"],
       "question": "Would you like to book our services?",
-      "answer": "Would you like to book our services? Please let me know how many bedrooms your house has and which pest you need help with, and I'll assist you with the booking."
+      "answer": "Would you like to book our services? Please let me know which pest you need help with and how many bedrooms your property has, and I'll assist you with the booking."
+    }
+  ],
+  "outOfAreaResponse": "We currently serve within a 40 km radius around Lusaka. We don't cover your area yet — please contact us at +260 570344123 for more information."
+}
     }
   ],
   "outOfAreaResponse": "Sadly, we don't have a branch there yet. We currently only serve the Gauteng/Johannesburg area."
